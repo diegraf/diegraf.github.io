@@ -109,3 +109,4 @@ footer a { color: var(--acento); text-decoration: none; font-weight: 600; margin
 .box .btn + .btn { margin-left: .6rem; }
 @media (max-width: 800px) { .box .btn + .btn { margin-left: 0; margin-top: .7rem; } .box .btn { display: block; } }
 .cards.c5 { grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); }
+.cards.c3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
