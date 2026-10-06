@@ -110,3 +110,12 @@ footer a { color: var(--acento); text-decoration: none; font-weight: 600; margin
 @media (max-width: 800px) { .box .btn + .btn { margin-left: 0; margin-top: .7rem; } .box .btn { display: block; } }
 .cards.c5 { grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); }
 .cards.c3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+.semmensal { margin-top: 1.4rem; color: var(--fraco); font-size: 1.05rem; }
+.semmensal b { color: #fff; }
+.destaque { max-width: 760px; margin: 0 auto 2.6rem; text-align: center; padding: 2.2rem 1.5rem; border-radius: 16px; border: 1px solid rgba(96,175,255,.35);
+  background: radial-gradient(500px 220px at 50% 0%, rgba(47,128,237,.28), transparent 70%), var(--painel); box-shadow: 0 0 60px rgba(47,128,237,.18); }
+.destaque .g { font-size: 2.6rem; line-height: 1.1; font-weight: 700; letter-spacing: -.02em; color: #fff; }
+.destaque .g em { font-style: normal; background: linear-gradient(95deg,#7cc0ff,#2f80ed); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.destaque p { margin-top: 1rem; color: var(--fraco); font-size: 1rem; }
+@media (max-width: 800px) { .destaque .g { font-size: 1.9rem; } }
