@@ -145,3 +145,10 @@ footer a { color: var(--acento); text-decoration: none; font-weight: 600; margin
 .comprar h3 { color: #fff; font-size: 1.6rem; margin-bottom: .6rem; }
 .comprar > p { color: var(--fraco); max-width: 560px; margin: 0 auto; }
 .comprar .acoes { margin-top: 1.5rem; }
+
+.lanc { margin: 1.8rem auto 0; display: inline-block; padding: 1.2rem 2.2rem; border-radius: 14px; border: 1px solid rgba(96,175,255,.45); background: linear-gradient(160deg, #1a2d55, var(--painel) 80%); box-shadow: 0 0 40px rgba(47,128,237,.22); }
+.lanc span { display: block; font-size: .72rem; letter-spacing: .24em; font-weight: 700; color: #60afff; }
+.lanc b { display: block; margin-top: .4rem; font-size: 2.8rem; line-height: 1; letter-spacing: -.03em; color: #fff; }
+.lanc small { display: block; margin-top: .5rem; color: var(--fraco); font-size: .9rem; }
+.comprar { text-align: center; }
+@media (max-width: 800px) { .lanc { padding: 1rem 1.2rem; } .lanc b { font-size: 2.2rem; } }
