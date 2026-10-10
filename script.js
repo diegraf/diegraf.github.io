@@ -23,17 +23,34 @@
   });
 })();
 
-// videoaulas: o player do YouTube só carrega ao clicar (site continua leve)
-document.querySelectorAll('.vplay').forEach(function (b) {
-  b.addEventListener('click', function () {
+// videoaulas: player grande; as miniaturas trocam o vídeo dele (o YouTube só carrega ao clicar)
+(function () {
+  var tela = document.querySelector('.vtela');
+  if (!tela) return;
+  function tocar(id, titulo) {
     var f = document.createElement('iframe');
-    f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.id + '?autoplay=1&rel=0';
-    f.title = b.getAttribute('aria-label');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+    f.title = titulo;
     f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
     f.allowFullscreen = true;
-    b.replaceWith(f);
+    tela.innerHTML = '';
+    tela.appendChild(f);
+  }
+  var capa = tela.querySelector('.vplay');
+  capa.addEventListener('click', function () { tocar(capa.dataset.id, capa.getAttribute('aria-label')); });
+  document.querySelectorAll('.vitem').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('.vitem.on').forEach(function (x) { x.classList.remove('on'); });
+      b.classList.add('on');
+      document.getElementById('v-rot').textContent = b.dataset.rot;
+      document.getElementById('v-tit').textContent = b.dataset.tit;
+      document.getElementById('v-desc').textContent = b.dataset.desc;
+      tocar(b.dataset.id, b.dataset.tit);
+      var r = tela.getBoundingClientRect();
+      if (r.top < 70 || r.bottom > innerHeight) tela.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
   });
-});
+})();
 
 // link vindo de outra página (index.html#videoaulas): rola até a seção depois que a página carrega
 window.addEventListener('load', function () {
