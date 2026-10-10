@@ -22,3 +22,15 @@
     if (e.key === 'ArrowLeft') go(-1);
   });
 })();
+
+// videoaulas: o player do YouTube só carrega ao clicar (site continua leve)
+document.querySelectorAll('.vplay').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.id + '?autoplay=1&rel=0';
+    f.title = b.getAttribute('aria-label');
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen = true;
+    b.replaceWith(f);
+  });
+});
