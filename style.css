@@ -152,3 +152,16 @@ footer a { color: var(--acento); text-decoration: none; font-weight: 600; margin
 .lanc small { display: block; margin-top: .5rem; color: var(--fraco); font-size: .9rem; }
 .comprar { text-align: center; }
 @media (max-width: 800px) { .lanc { padding: 1rem 1.2rem; } .lanc b { font-size: 2.2rem; } }
+
+/* videoaulas */
+.va { display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.6rem; align-items: center; }
+.va-img { position: relative; display: block; border-radius: 12px; overflow: hidden; border: 1px solid var(--borda); }
+.va-img img { display: block; width: 100%; height: auto; transition: transform .3s; }
+.va-img:hover img { transform: scale(1.03); }
+.va-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 72px; height: 72px; border-radius: 50%;
+  background: rgba(47,128,237,.92); color: #fff; font-size: 1.6rem; display: flex; align-items: center; justify-content: center;
+  padding-left: 5px; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+.va-lista { counter-reset: va; list-style: none; display: grid; gap: .55rem; }
+.va-lista li { counter-increment: va; background: var(--painel); border: 1px solid var(--borda); border-radius: 8px; padding: .65rem .9rem; color: var(--texto); font-size: .95rem; }
+.va-lista li::before { content: counter(va, decimal-leading-zero); color: var(--acento); font-weight: 800; margin-right: .7rem; font-size: .8rem; }
+@media (max-width: 760px) { .va { grid-template-columns: 1fr; } }
