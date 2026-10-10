@@ -34,3 +34,10 @@ document.querySelectorAll('.vplay').forEach(function (b) {
     b.replaceWith(f);
   });
 });
+
+// link vindo de outra página (index.html#videoaulas): rola até a seção depois que a página carrega
+window.addEventListener('load', function () {
+  if (!location.hash) return;
+  var alvo = document.querySelector(location.hash);
+  if (alvo) setTimeout(function () { alvo.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 150);
+});
