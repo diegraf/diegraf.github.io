@@ -173,3 +173,6 @@ footer a { color: var(--acento); text-decoration: none; font-weight: 600; margin
 .vdest .vinfo h3 { font-size: 1.25rem; }
 @media (max-width: 900px) { .vgrade { grid-template-columns: repeat(2, 1fr); } .vbox.vdest { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .vgrade { grid-template-columns: 1fr; } }
+
+.vpag { padding-top: 3rem; }
+.vpag h1 { text-align: center; color: #fff; font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: .6rem; }
