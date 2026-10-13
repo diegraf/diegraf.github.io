@@ -219,3 +219,8 @@ footer a { color: var(--acento); text-decoration: none; font-weight: 600; margin
 .cmp-ok { display: inline-block; width: .95rem; height: .5rem; border-left: 2.5px solid #4be08c; border-bottom: 2.5px solid #4be08c; transform: rotate(-45deg) translateY(-2px); }
 .cmp-no { color: var(--fraco); }
 @media (max-width: 560px) { .cmp th, .cmp td { padding: .65rem .6rem; font-size: .85rem; } }
+
+/* página PRO */
+.pro-tag { display: inline-block; font-size: .7rem; font-weight: 800; letter-spacing: .14em; color: #fff; background: linear-gradient(95deg,#2f80ed,#1c5bc4); padding: .25rem .6rem; border-radius: 99px; margin-bottom: .5rem; }
+.pagehead h1 em { font-style: normal; background: linear-gradient(95deg,#7cc0ff,#2f80ed); -webkit-background-clip: text; background-clip: text; color: transparent; }
+nav a.nav-pro { color: #7cc0ff; font-weight: 700; }
